@@ -39,7 +39,22 @@ public class Batch {
 	}
 	
 	public Trainee[] getTrainees(char gender) {
-		return trainees;
+		Trainee [] traineesg = new Trainee[this.trainees.length];
+		int j = 0;
+		for(int i = 0 ; i < this.trainees.length ; i ++) {
+		   if (this.trainees[i].gender == gender) {                                				
+			   traineesg[j] = this.trainees[i];
+		   		j++;
+		   }
+		}
+		
+		if (j > 0) {
+		System.out.println("Trainee gender " + gender + " found in Collection"); 
+		}
+		else{
+		System.out.println("Trainee gender " + gender + " not found in Collection");
+		}
+		return traineesg;
 	}
 
 	
