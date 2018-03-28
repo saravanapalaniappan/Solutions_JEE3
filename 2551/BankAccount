@@ -1,0 +1,15 @@
+package com.santy.impl;
+import com.santy.entity.BankAccount;
+import com.santy.exceptionhandler.InsufficientFundException; 
+import com.santy.exceptionhandler.InvalidAmountException; 
+import com.santy.provider.IBankServiceProvider; 
+import java.util.Arrays;
+/**
+* Bank class which has a relationship with BankAccount class
+*/
+public class Bank implements IBankServiceProvider { 
+   private BankAccount[] bankAccounts = new BankAccount[]{}; 
+	 private static int lastAssignedNo = 0; 
+	 /**
+	 public Bank() {
+	 
